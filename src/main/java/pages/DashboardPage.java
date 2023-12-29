@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import core.StepBaseClass;
+import utilityFunctions.UtilityClass;
 
 public class DashboardPage extends StepBaseClass{
 	
@@ -18,11 +19,13 @@ public class DashboardPage extends StepBaseClass{
 		PageFactory.initElements(driver, this);
 	}
 	
+	UtilityClass objUtility = new UtilityClass();
 	
 	public void clickOnCreateAccount() {
 		
-		createAnAccount.click();
-		System.out.println("Create an Account link clicked");
+//		createAnAccount.click();
+//		System.out.println("Create an Account link clicked");
+		objUtility.clickOnWebElement(createAnAccount, 5);
 	}
 	
 	public void isTitleDisplayed() {
